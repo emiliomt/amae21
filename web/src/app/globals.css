@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { @apply bg-paper text-charcoal font-sans antialiased; }
+h1, h2, h3 { @apply font-serif font-medium tracking-tight; }
+.btn { @apply inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-medium text-white transition hover:bg-accent-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent; }
+.btn-ghost { @apply inline-flex items-center justify-center rounded-full border border-charcoal/30 px-6 py-3 text-sm font-medium transition hover:bg-charcoal hover:text-white; }
+.container-x { @apply mx-auto w-full max-w-6xl px-4 sm:px-6; }

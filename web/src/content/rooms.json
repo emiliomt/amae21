@@ -1,0 +1,24 @@
+{
+  "rooms": [
+    { "id": "deluxe-king", "guests": 2, "bed": { "es": "1 cama King", "en": "1 King bed" },
+      "name": { "es": "Deluxe King", "en": "Deluxe King" },
+      "description": { "es": "Loft luminoso con cama King, escritorio y baño de diseño. Ideal para viajes de trabajo o escapadas en pareja.", "en": "Bright loft with a King bed, desk and designer bathroom. Ideal for work trips or couples." },
+      "amenities": { "es": ["Aire acondicionado", "Wi-Fi rápido", "Smart TV", "Escritorio", "Cafetera"], "en": ["Air conditioning", "Fast Wi-Fi", "Smart TV", "Desk", "Coffee maker"] },
+      "photos": 3 },
+    { "id": "deluxe-doble", "guests": 4, "bed": { "es": "2 camas matrimoniales", "en": "2 double beds" },
+      "name": { "es": "Deluxe Doble", "en": "Deluxe Double" },
+      "description": { "es": "Dos camas matrimoniales en un espacio amplio, perfecto para amigos, colegas o familia.", "en": "Two double beds in a spacious room, great for friends, colleagues or family." },
+      "amenities": { "es": ["Aire acondicionado", "Wi-Fi rápido", "Smart TV", "Escritorio", "Cafetera"], "en": ["Air conditioning", "Fast Wi-Fi", "Smart TV", "Desk", "Coffee maker"] },
+      "photos": 3 },
+    { "id": "master-suite", "guests": 3, "bed": { "es": "1 cama King + sofá cama", "en": "1 King bed + sofa bed" },
+      "name": { "es": "Master Suite / Loft", "en": "Master Suite / Loft" },
+      "description": { "es": "Nuestro loft más completo: cocineta y terraza privada para estancias largas o celebraciones tranquilas.", "en": "Our most complete loft: kitchenette and private terrace for longer stays or quiet celebrations." },
+      "amenities": { "es": ["Cocineta", "Terraza", "Aire acondicionado", "Wi-Fi rápido", "Smart TV"], "en": ["Kitchenette", "Terrace", "Air conditioning", "Fast Wi-Fi", "Smart TV"] },
+      "photos": 3 },
+    { "id": "family-room", "guests": 5, "bed": { "es": "Dos cuartos conectados", "en": "Two connected rooms" },
+      "name": { "es": "Family Room", "en": "Family Room" },
+      "description": { "es": "Dos cuartos conectados con espacio para hasta 5 personas, sin sacrificar privacidad.", "en": "Two connected rooms for up to 5 guests, without giving up privacy." },
+      "amenities": { "es": ["Dos cuartos conectados", "Aire acondicionado", "Wi-Fi rápido", "Smart TV", "Cafetera"], "en": ["Two connected rooms", "Air conditioning", "Fast Wi-Fi", "Smart TV", "Coffee maker"] },
+      "photos": 3 }
+  ]
+}
