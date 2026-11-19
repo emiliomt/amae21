@@ -12,16 +12,16 @@ export default async function Location({ params }: { params: Promise<{ locale: s
     <>
       <Header locale={l} current="/ubicacion" />
       <main className="container-x mt-10">
-        <h1 className="text-4xl sm:text-5xl">{d.location.title}</h1>
-        <p className="mt-2 text-charcoal-soft">{d.location.intro}</p>
-        <iframe title={d.location.mapTitle} src={osm} loading="lazy" className="mt-6 h-80 w-full rounded-2xl border border-sand-200" />
-        <a className="btn-ghost mt-4" href={`https://www.google.com/maps?q=${lat},${lng}`} target="_blank" rel="noopener noreferrer">{d.location.openMap}</a>
-        <h2 className="mt-12 text-3xl">{d.location.nearbyTitle}</h2>
-        <div className="mt-4 grid gap-4 sm:grid-cols-2">
-          {d.location.nearby.map((n) => <div key={n.t} className="rounded-2xl bg-sand-100 p-5"><h3 className="text-xl">{n.t}</h3><p className="mt-1 text-sm text-charcoal-soft">{n.d}</p></div>)}
+        <h1 className="text-[2rem] sm:text-[3rem]">{d.location.title}</h1>
+        <p className="mt-2 text-dusk-soft">{d.location.intro}</p>
+        <iframe title={d.location.mapTitle} src={osm} loading="lazy" className="mt-8 h-80 w-full border border-concreto [filter:grayscale(1)_contrast(1.05)]" />
+        <a className="btn-line mt-5" href={`https://www.google.com/maps?q=${lat},${lng}`} target="_blank" rel="noopener noreferrer">{d.location.openMap}</a>
+        <h2 className="mt-14 h-sec">{d.location.nearbyTitle}</h2>
+        <div className="mt-6 grid gap-x-12 gap-y-6 sm:grid-cols-2">
+          {d.location.nearby.map((n) => <div key={n.t} className="bullet"><h3 className="text-lg">{n.t}</h3><p className="mt-1 text-dusk-soft">{n.d}</p></div>)}
         </div>
-        <h2 className="mt-12 text-3xl">{d.location.gettingThereTitle}</h2>
-        <p className="mt-3 max-w-2xl text-charcoal-soft">{d.location.gettingThere}</p>
+        <h2 className="mt-14 h-sec">{d.location.gettingThereTitle}</h2>
+        <p className="mt-3 max-w-2xl text-dusk-soft">{d.location.gettingThere}</p>
       </main>
     </>
   );

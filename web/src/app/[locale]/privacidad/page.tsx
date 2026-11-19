@@ -9,9 +9,9 @@ export default async function Privacy({ params }: { params: Promise<{ locale: st
     <>
       <Header locale={l} current="/privacidad" />
       <main className="container-x mt-10 max-w-3xl">
-        <h1 className="text-4xl sm:text-5xl">{d.title}</h1>
-        <p className="mt-3 rounded-lg bg-sand-100 p-3 text-sm font-medium text-accent">{d.banner}</p>
-        {d.sections.map((s) => <section key={s.t} className="mt-6"><h2 className="text-2xl">{s.t}</h2><p className="mt-2 text-charcoal-soft">{s.p}</p></section>)}
+        <h1 className="text-[2rem] sm:text-[3rem]">{d.title}</h1>
+        <p className="mt-4 border-l-4 border-luz bg-bruma p-3 font-display text-sm font-medium">{d.banner}</p>
+        {d.sections.map((s) => <section key={s.t} className="mt-6"><h2 className="text-xl">{s.t}</h2><p className="mt-2 max-w-[65ch] text-dusk-soft">{s.p}</p></section>)}
       </main>
     </>
   );

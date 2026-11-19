@@ -9,10 +9,9 @@ export const es = {
   // Texto exacto por confirmar con AMAE21.
   benefitBanner: "Reserva directo: desayuno incluido o late checkout",
   home: {
-    eyebrow: "Hotel boutique · San Pedro Garza García",
     title: "Lofts boutique en el corazón del Centrito Valle",
     subtitle: "21 cuartos con diseño cálido, check-in sin contacto y todo a unos pasos.",
-    highlightsTitle: "Todo lo que necesitas",
+    highlightsTitle: "Por qué quedarte aquí",
     highlights: [
       { t: "Ubicación", d: "A pasos del Centrito Valle y la Calzada del Valle." },
       { t: "Check-in sin contacto", d: "Llega a tu hora, sin filas ni esperas." },
@@ -22,17 +21,17 @@ export const es = {
     roomsTitle: "Nuestros cuartos",
     roomsCta: "Ver todos los cuartos",
     reviewsTitle: "Lo que dicen nuestros huéspedes",
-    reviewsNote: "Reseñas de huéspedes — pendientes de autorización por AMAE21.",
+    reviewsNote: "Reseñas pendientes de autorización por AMAE21.",
     reviews: [
       { q: "Reseña de ejemplo: texto por reemplazar con una reseña real y autorizada.", a: "Huésped — PLACEHOLDER" },
       { q: "Reseña de ejemplo: texto por reemplazar con una reseña real y autorizada.", a: "Huésped — PLACEHOLDER" },
     ],
-    finalTitle: "Tu mejor tarifa empieza aquí",
-    finalText: "Reserva directo y elige tu beneficio: desayuno incluido o late checkout.",
+    finalTitle: "Elige tu beneficio al reservar directo",
+    finalText: "Desayuno incluido o late checkout, confirmado con tu reserva.",
   },
   rooms: {
     title: "Cuartos", intro: "Cuatro tipos de loft, todos pensados para sentirse en casa.",
-    guests: "Hasta {n} personas", amenities: "Amenidades", book: "Reservar", photoNote: "FOTO AMAE21",
+    guests: "Hasta {n} personas", amenities: "Amenidades", view: "Ver cuarto", book: "Reservar", photoNote: "FOTO AMAE21",
   },
   location: {
     title: "Ubicación", intro: "Río Salinas 218, Col. Del Valle, San Pedro Garza García, N.L.",

@@ -40,26 +40,26 @@ export default function RegisterForm({ locale }: { locale: Locale }) {
   }
 
   if (state === "ok") return (
-    <div role="status" className="rounded-2xl bg-sand-100 p-6 text-center">
-      <p className="font-serif text-2xl">{d.ok}</p>
-      {site.demo && <p className="mt-2 text-xs uppercase tracking-widest text-accent">DEMO: no se guardó ningún dato</p>}
+    <div role="status" className="bg-bruma p-6">
+      <p className="font-display text-xl font-semibold">{d.ok}</p>
+      {site.demo && <p className="mt-2 text-sm text-dusk-soft">Demo: no se guardó ningún dato</p>}
     </div>
   );
-  const field = "mt-1 w-full rounded-lg border border-sand-300 bg-white px-3 py-3 text-base outline-none focus:border-accent";
+  const field = "mt-1 w-full rounded-[2px] border border-dusk/40 bg-bruma px-3 py-3 text-base focus:border-dusk";
   return (
     <form onSubmit={onSubmit} noValidate className="space-y-4">
       <div className="hidden" aria-hidden="true"><label>Website<input name="website" tabIndex={-1} autoComplete="off" /></label></div>
-      <label className="block text-sm">{d.name}<input name="nombre" autoComplete="name" className={field} />{errors.nombre && <span role="alert" className="text-accent">{errors.nombre}</span>}</label>
-      <label className="block text-sm">{d.whatsapp}<input name="whatsapp" type="tel" inputMode="tel" autoComplete="tel" className={field} />{errors.whatsapp && <span role="alert" className="text-accent">{errors.whatsapp}</span>}</label>
-      <label className="block text-sm">{d.email}<input name="correo" type="email" autoComplete="email" className={field} />{errors.correo && <span role="alert" className="text-accent">{errors.correo}</span>}</label>
-      <label className="flex items-start gap-3 text-sm">
-        <input type="checkbox" name="consent" className="mt-1 h-5 w-5 accent-[#9c4a2f]" />
+      <label className="block font-display text-sm font-medium">{d.name}<input name="nombre" autoComplete="name" className={field} />{errors.nombre && <span role="alert" className="text-error">{errors.nombre}</span>}</label>
+      <label className="block font-display text-sm font-medium">{d.whatsapp}<input name="whatsapp" type="tel" inputMode="tel" autoComplete="tel" className={field} />{errors.whatsapp && <span role="alert" className="text-error">{errors.whatsapp}</span>}</label>
+      <label className="block font-display text-sm font-medium">{d.email}<input name="correo" type="email" autoComplete="email" className={field} />{errors.correo && <span role="alert" className="text-error">{errors.correo}</span>}</label>
+      <label className="flex items-start gap-3 text-[0.95rem]">
+        <input type="checkbox" name="consent" className="mt-1 h-5 w-5 accent-[#1E2B3A]" />
         <span>{d.consent} <Link href={path(locale, "/privacidad")} className="underline" target="_blank">{d.privacyLink}</Link>.</span>
       </label>
-      {errors.consent && <p role="alert" className="text-sm text-accent">{errors.consent}</p>}
+      {errors.consent && <p role="alert" className="text-sm text-error">{errors.consent}</p>}
       <button className="btn w-full" disabled={state === "sending"}>{state === "sending" ? d.sending : d.submit}</button>
-      {state === "error" && <p role="alert" className="text-sm text-accent">{d.error}</p>}
-      {state === "unconfigured" && <p role="alert" className="text-sm text-accent">{d.notConfigured}</p>}
+      {state === "error" && <p role="alert" className="text-sm text-error">{d.error}</p>}
+      {state === "unconfigured" && <p role="alert" className="text-sm text-error">{d.notConfigured}</p>}
     </form>
   );
 }

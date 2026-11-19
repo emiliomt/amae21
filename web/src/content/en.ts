@@ -8,10 +8,9 @@ export const en: Dict = {
   cta: "Book direct",
   benefitBanner: "Book direct: breakfast included or late checkout",
   home: {
-    eyebrow: "Boutique hotel · San Pedro Garza García",
     title: "Boutique lofts in the heart of Centrito Valle",
     subtitle: "21 warmly designed rooms, contactless check-in and everything steps away.",
-    highlightsTitle: "Everything you need",
+    highlightsTitle: "Why stay here",
     highlights: [
       { t: "Location", d: "Steps from Centrito Valle and Calzada del Valle." },
       { t: "Contactless check-in", d: "Arrive at your own pace, no lines or waiting." },
@@ -21,17 +20,17 @@ export const en: Dict = {
     roomsTitle: "Our rooms",
     roomsCta: "See all rooms",
     reviewsTitle: "What our guests say",
-    reviewsNote: "Guest reviews — pending approval by AMAE21.",
+    reviewsNote: "Reviews pending approval by AMAE21.",
     reviews: [
       { q: "Sample review: replace with a real, authorized review.", a: "Guest — PLACEHOLDER" },
       { q: "Sample review: replace with a real, authorized review.", a: "Guest — PLACEHOLDER" },
     ],
-    finalTitle: "Your best rate starts here",
-    finalText: "Book direct and choose your perk: breakfast included or late checkout.",
+    finalTitle: "Choose your perk when you book direct",
+    finalText: "Breakfast included or late checkout, confirmed with your booking.",
   },
   rooms: {
     title: "Rooms", intro: "Four loft types, all designed to feel like home.",
-    guests: "Up to {n} guests", amenities: "Amenities", book: "Book", photoNote: "FOTO AMAE21",
+    guests: "Up to {n} guests", amenities: "Amenities", view: "See room", book: "Book", photoNote: "FOTO AMAE21",
   },
   location: {
     title: "Location", intro: "Río Salinas 218, Col. Del Valle, San Pedro Garza García, N.L., Mexico",

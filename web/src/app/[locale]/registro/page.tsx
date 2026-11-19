@@ -10,8 +10,8 @@ export default async function Register({ params }: { params: Promise<{ locale: s
     <>
       <Header locale={l} current="/registro" />
       <main className="container-x mt-10 max-w-lg">
-        <h1 className="text-4xl">{d.title}</h1>
-        <p className="mt-2 text-charcoal-soft">{d.intro}</p>
+        <h1 className="text-[2rem] sm:text-[2.5rem]">{d.title}</h1>
+        <p className="mt-2 text-dusk-soft">{d.intro}</p>
         <div className="mt-6"><RegisterForm locale={l} /></div>
       </main>
     </>

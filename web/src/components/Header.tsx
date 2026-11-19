@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { site, type Locale } from "@/config/site";
+import { type Locale } from "@/config/site";
 import { getDict, otherLocale, path } from "@/lib/i18n";
 import ReserveButton from "./ReserveButton";
 
@@ -7,24 +7,23 @@ export default function Header({ locale, current }: { locale: Locale; current: s
   const d = getDict(locale);
   const links = [["", d.nav.home], ["/cuartos", d.nav.rooms], ["/ubicacion", d.nav.location], ["/faq", d.nav.faq]] as const;
   const other = otherLocale(locale);
+  const nav = (p: string) => `border-b-2 pb-0.5 font-display text-sm font-medium ${current === p ? "border-luz" : "border-transparent hover:border-dusk/40"}`;
   return (
-    <header className="sticky top-0 z-40 border-b border-sand-200 bg-paper/95 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-concreto bg-yeso/95 backdrop-blur">
       <div className="container-x flex h-16 items-center justify-between gap-3">
-        <Link href={path(locale)} className="font-serif text-xl tracking-tight">{site.name}</Link>
-        <nav aria-label="principal" className="hidden gap-6 text-sm md:flex">
-          {links.map(([p, label]) => (
-            <Link key={p} href={path(locale, p)} className={current === p ? "text-accent" : "hover:text-accent"}>{label}</Link>
-          ))}
+        <Link href={path(locale)} className="flex items-center gap-2 font-display text-lg font-bold" style={{ fontStretch: "125%" }} aria-label="AMAE21 Lofts">
+          AMAE<span className="bg-luz px-1.5 text-dusk-deep">21</span><span className="hidden font-medium sm:inline">Lofts</span>
+        </Link>
+        <nav aria-label="principal" className="hidden gap-7 md:flex">
+          {links.map(([p, label]) => <Link key={p} href={path(locale, p)} className={nav(p)}>{label}</Link>)}
         </nav>
-        <div className="flex items-center gap-3">
-          <Link href={path(other, current)} hrefLang={other} className="text-xs font-medium uppercase tracking-widest text-charcoal-soft hover:text-accent">{other}</Link>
-          <ReserveButton href={path(locale, "/reservar")} label={d.cta} where="header" className="btn !px-4 !py-2" />
+        <div className="flex items-center gap-4">
+          <Link href={path(other, current)} hrefLang={other} lang={other} className="font-display text-sm font-medium underline-offset-4 hover:underline">{other === "en" ? "English" : "Español"}</Link>
+          <ReserveButton href={path(locale, "/reservar")} label={d.cta} where="header" className="btn !px-4 !py-2.5" />
         </div>
       </div>
-      <nav aria-label="móvil" className="container-x flex gap-5 overflow-x-auto pb-2 text-sm md:hidden">
-        {links.map(([p, label]) => (
-          <Link key={p} href={path(locale, p)} className={`whitespace-nowrap ${current === p ? "text-accent" : "text-charcoal-soft"}`}>{label}</Link>
-        ))}
+      <nav aria-label="móvil" className="container-x flex gap-6 overflow-x-auto pb-2 md:hidden">
+        {links.map(([p, label]) => <Link key={p} href={path(locale, p)} className={`whitespace-nowrap ${nav(p)}`}>{label}</Link>)}
       </nav>
     </header>
   );
