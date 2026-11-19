@@ -5,9 +5,9 @@
 @layer base {
   @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
   body { @apply bg-yeso text-dusk font-body text-[1.0625rem] leading-[1.65] antialiased; }
-  h1, h2, h3 { @apply font-display font-semibold leading-[1.08] tracking-[-0.01em]; font-stretch: 125%; }
-  :focus-visible { outline: 3px solid #1E2B3A; outline-offset: 3px; }
-  .on-dark :focus-visible { outline-color: #F0B64A; }
+  h1, h2, h3 { @apply font-display font-medium leading-[1.08] tracking-[-0.01em]; font-stretch: 125%; }
+  :focus-visible { outline: 3px solid #2E2A27; outline-offset: 3px; }
+  .on-dark :focus-visible { outline-color: #CBB07A; }
 }
 @layer components {
   .btn { @apply inline-flex items-center justify-center rounded-[2px] bg-luz px-6 py-3.5 font-display text-[0.95rem] font-semibold text-dusk-deep transition-colors hover:bg-luz-hover; }
@@ -20,15 +20,15 @@
 }
 
 /* La fachada: único movimiento de la página. Las 21 ventanas se encienden una vez al cargar. */
-.fachada-win { aspect-ratio: 3 / 4; position: relative; background: #F0B64A; }
-.fachada-win:nth-child(3n+1) { background: #F4C46B; }
-.fachada-win:nth-child(5n+2) { background: #E8A83A; }
-.fachada-win::after { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; margin-left: -1px; background: #141D28; }
-.fachada-win::before { content: ""; position: absolute; left: 0; right: 0; top: 62%; height: 2px; background: #141D28; z-index: 1; }
+.fachada-win { aspect-ratio: 3 / 4; position: relative; background: #CBB07A; }
+.fachada-win:nth-child(3n+1) { background: #D6BF8C; }
+.fachada-win:nth-child(5n+2) { background: #BFA168; }
+.fachada-win::after { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; margin-left: -1px; background: #1F1C1A; }
+.fachada-win::before { content: ""; position: absolute; left: 0; right: 0; top: 62%; height: 2px; background: #1F1C1A; z-index: 1; }
 @media (prefers-reduced-motion: no-preference) {
   .fachada-win { animation: encender 0.8s ease-out both; animation-delay: calc(var(--d) * 85ms + 350ms); }
 }
-@keyframes encender { from { background: #1A2636; } }
+@keyframes encender { from { background: #26221F; } }
 
 details > summary { list-style: none; }
 details > summary::-webkit-details-marker { display: none; }

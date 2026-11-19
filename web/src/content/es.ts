@@ -21,11 +21,7 @@ export const es = {
     roomsTitle: "Nuestros cuartos",
     roomsCta: "Ver todos los cuartos",
     reviewsTitle: "Lo que dicen nuestros huéspedes",
-    reviewsNote: "Reseñas pendientes de autorización por AMAE21.",
-    reviews: [
-      { q: "Reseña de ejemplo: texto por reemplazar con una reseña real y autorizada.", a: "Huésped — PLACEHOLDER" },
-      { q: "Reseña de ejemplo: texto por reemplazar con una reseña real y autorizada.", a: "Huésped — PLACEHOLDER" },
-    ],
+    reviewsNote: "Reseñas públicas de Google. Pendientes de autorización por AMAE21.", reviewSource: "Reseña en Google",
     finalTitle: "Elige tu beneficio al reservar directo",
     finalText: "Desayuno incluido o late checkout, confirmado con tu reserva.",
   },

@@ -10,9 +10,10 @@ export default function Header({ locale, current }: { locale: Locale; current: s
   const nav = (p: string) => `border-b-2 pb-0.5 font-display text-sm font-medium ${current === p ? "border-luz" : "border-transparent hover:border-dusk/40"}`;
   return (
     <header className="sticky top-0 z-40 border-b border-concreto bg-yeso/95 backdrop-blur">
-      <div className="container-x flex h-16 items-center justify-between gap-3">
-        <Link href={path(locale)} className="flex items-center gap-2 font-display text-lg font-bold" style={{ fontStretch: "125%" }} aria-label="AMAE21 Lofts">
-          AMAE<span className="bg-luz px-1.5 text-dusk-deep">21</span><span className="hidden font-medium sm:inline">Lofts</span>
+      <div className="container-x flex h-[4.25rem] items-center justify-between gap-3">
+        <Link href={path(locale)} aria-label="AMAE21 Lofts">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/brand/logo-horizontal.webp" width={520} height={264} alt="AMAE21 Lofts" className="h-12 w-auto" />
         </Link>
         <nav aria-label="principal" className="hidden gap-7 md:flex">
           {links.map(([p, label]) => <Link key={p} href={path(locale, p)} className={nav(p)}>{label}</Link>)}

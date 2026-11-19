@@ -20,11 +20,7 @@ export const en: Dict = {
     roomsTitle: "Our rooms",
     roomsCta: "See all rooms",
     reviewsTitle: "What our guests say",
-    reviewsNote: "Reviews pending approval by AMAE21.",
-    reviews: [
-      { q: "Sample review: replace with a real, authorized review.", a: "Guest — PLACEHOLDER" },
-      { q: "Sample review: replace with a real, authorized review.", a: "Guest — PLACEHOLDER" },
-    ],
+    reviewsNote: "Public Google reviews. Pending approval by AMAE21.", reviewSource: "Google review",
     finalTitle: "Choose your perk when you book direct",
     finalText: "Breakfast included or late checkout, confirmed with your booking.",
   },

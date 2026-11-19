@@ -8,8 +8,9 @@ export default function Footer({ locale }: { locale: Locale }) {
     <footer className="on-dark mt-24 bg-dusk-deep pb-28 pt-12 text-concreto md:pb-12">
       <div className="container-x grid gap-8 text-[0.95rem] md:grid-cols-3">
         <div>
-          <p className="font-display text-lg font-bold text-yeso" style={{ fontStretch: "125%" }}>AMAE<span className="ml-0.5 bg-luz px-1.5 text-dusk-deep">21</span></p>
-          <address className="mt-3 not-italic">{site.address.street}, {site.address.colony}<br />{site.address.city}, {site.address.region}</address>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/brand/logo-vertical-blanco.webp" width={240} height={572} alt="AMAE21 Lofts" className="h-28 w-auto" />
+          <address className="mt-4 not-italic">{site.address.street}, {site.address.colony}<br />{site.address.city}, {site.address.region}</address>
         </div>
         <div><p>{site.phone}</p><p>{site.email}</p><p className="mt-3">{d.footer.directNote}</p></div>
         <div className="flex flex-col gap-1">

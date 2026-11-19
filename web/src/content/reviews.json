@@ -1,0 +1,8 @@
+{
+  "_nota": "Reseñas públicas de Google enviadas por AMAE21. Pendiente: confirmar que se pueden publicar y con qué nombre.",
+  "reviews": [
+    { "lang": "es", "text": "Excelente lugar para pasar un fin de semana. El alojamiento se encuentra en una zona muy agradable y segura, con varios restaurantes y bares a solo 5 minutos caminando.", "author": "Omar G." },
+    { "lang": "en", "text": "Great location and clean, comfortable room. Will stay again.", "author": "Bill B." },
+    { "lang": "es", "text": "Excelente servicio, ubicación y limpieza. Sin duda alguna los volvería a visitar.", "author": "Ana Lucía L." }
+  ]
+}

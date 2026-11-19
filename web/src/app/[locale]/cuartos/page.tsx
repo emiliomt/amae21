@@ -13,7 +13,7 @@ export default async function Rooms({ params }: { params: Promise<{ locale: stri
       <main className="container-x mt-12">
         <h1 className="text-[2rem] sm:text-[3rem]">{d.rooms.title}</h1>
         <p className="mt-3 max-w-[50ch] text-dusk-soft">{d.rooms.intro}</p>
-        <div className="mt-10">{rooms.rooms.map((r) => <RoomFull key={r.id} room={r} locale={l} />)}</div>
+        <div className="mt-10">{rooms.rooms.map((r, i) => <RoomFull key={r.id} room={r} locale={l} eager={i === 0} />)}</div>
       </main>
     </>
   );

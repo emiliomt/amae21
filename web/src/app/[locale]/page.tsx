@@ -3,10 +3,10 @@ import type { Locale } from "@/config/site";
 import { getDict, path } from "@/lib/i18n";
 import Header from "@/components/Header";
 import Facade from "@/components/Facade";
-import Photo from "@/components/Photo";
 import { RoomRow } from "@/components/RoomCard";
 import ReserveButton from "@/components/ReserveButton";
 import rooms from "@/content/rooms.json";
+import reviews from "@/content/reviews.json";
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const l = (await params).locale as Locale;
@@ -25,15 +25,20 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             <Facade label={l === "es" ? "Fachada con 21 ventanas, una por cuarto" : "Facade with 21 windows, one per room"} />
           </div>
         </section>
-        <Photo className="aspect-[4/3] w-full sm:aspect-[21/9]" tone={0} />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/img/inicio-banda.webp" width={1400} height={1050} alt={l === "es" ? "Cuarto con cama King y ventanales" : "Room with King bed and large windows"} className="aspect-[4/3] w-full bg-concreto object-cover sm:aspect-[21/9]" />
 
         <section className="container-x mt-20">
           <h2 className="h-sec">{d.home.highlightsTitle}</h2>
-          <dl className="mt-8 grid gap-x-12 gap-y-8 sm:grid-cols-2">
-            {d.home.highlights.map((h) => (
-              <div key={h.t} className="bullet"><dt className="font-display text-lg font-semibold">{h.t}</dt><dd className="mt-1 max-w-[46ch] text-dusk-soft">{h.d}</dd></div>
-            ))}
-          </dl>
+          <div className="mt-8 grid items-start gap-10 md:grid-cols-[1.2fr_1fr]">
+            <dl className="grid gap-y-8">
+              {d.home.highlights.map((h) => (
+                <div key={h.t} className="bullet"><dt className="font-display text-lg font-semibold">{h.t}</dt><dd className="mt-1 max-w-[46ch] text-dusk-soft">{h.d}</dd></div>
+              ))}
+            </dl>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/img/mural.webp" width={1000} height={1333} loading="lazy" alt={l === "es" ? "Mural y jardín en AMAE21 Lofts" : "Mural and garden at AMAE21 Lofts"} className="aspect-[4/5] w-full max-w-sm bg-concreto object-cover md:max-w-none" />
+          </div>
         </section>
 
         <section className="container-x mt-20">
@@ -45,8 +50,8 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <section className="container-x mt-20">
           <h2 className="h-sec">{d.home.reviewsTitle}</h2>
           <p className="mt-1 text-sm text-dusk-soft">{d.home.reviewsNote}</p>
-          <div className="mt-8 grid gap-10 md:grid-cols-2">
-            {d.home.reviews.map((r, i) => <blockquote key={i}><p className="font-body text-2xl italic leading-snug">“{r.q}”</p><footer className="mt-3 font-display text-sm text-dusk-soft">{r.a}</footer></blockquote>)}
+          <div className="mt-8 grid gap-10 md:grid-cols-3">
+            {reviews.reviews.map((r, i) => <blockquote key={i} lang={r.lang}><p className="font-body text-xl leading-snug">“{r.text}”</p><footer className="mt-3 font-display text-sm text-dusk-soft">{r.author}, {d.home.reviewSource}</footer></blockquote>)}
           </div>
         </section>
 
