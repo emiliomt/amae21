@@ -1,0 +1,20 @@
+# Configuración de AMAE21. Solo una persona edita este archivo; el algoritmo nunca lo escribe.
+
+[descuentos]
+# Tope de descuento efectivo por canal (fracción: 0.15 = 15%).
+tope_por_canal = 0.15
+
+[tipos_de_cuarto]
+# Piso y techo por tipo de cuarto (MXN). VALORES PROVISIONALES: Emilio y Paola deben definirlos.
+[tipos_de_cuarto."Deluxe King"]
+piso = 0
+techo = 0
+[tipos_de_cuarto."Deluxe Doble"]
+piso = 0
+techo = 0
+[tipos_de_cuarto."Master Suite"]
+piso = 0
+techo = 0
+[tipos_de_cuarto."Family Room"]
+piso = 0
+techo = 0
